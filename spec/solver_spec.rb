@@ -43,4 +43,37 @@ describe Solver do
   end
 end
 
-# Leo, please write your code here
+# Factorial Tests
+describe Solver do
+  before :all do
+    @solver = Solver.new
+  end
+
+  context 'Factorial' do
+    it 'should be a method of Solver and return an integer' do
+      expect(@solver).to respond_to(:factorial)
+      expect(@solver.factorial(2)).to be_kind_of Integer
+    end
+
+    it 'should only accept 0 and positive integers as arguments, if not, it should raise exception' do
+      expect { @solver.factorial(2.6) }.to raise_error('This method only accepts 0 and positive integers')
+      expect { @solver.factorial(-1) }.to raise_error('This method only accepts 0 and positive integers')
+    end
+
+    it 'should return 1 if passing 0' do
+      expect(@solver.factorial(0)).to eql 1
+    end
+
+    it 'should return 1 if passing 1' do
+      expect(@solver.factorial(1)).to eql 1
+    end
+
+    it 'should return 2 if passing 2' do
+      expect(@solver.factorial(2)).to eql 2
+    end
+
+    it 'should return 24 if passing 4' do
+      expect(@solver.factorial(4)).to eql 24
+    end
+  end
+end
