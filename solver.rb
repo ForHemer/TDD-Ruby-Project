@@ -17,4 +17,11 @@ class Solver
       num.to_s
     end
   end
+
+  def factorial(num)
+    raise 'This method only accepts 0 and positive integers' if num.negative? || num.class != Integer
+    return 1 if num.zero?
+
+    factorial(num - 1) * num
+  end
 end
