@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Create solver class
 class Solver
   def reverse(word)
