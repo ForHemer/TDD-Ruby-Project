@@ -1,8 +1,7 @@
-# frozen_string_literal: true
-
 require_relative './spec_helper'
 require_relative '../solver'
 
+# Fizzbuzz algorithm Tests
 describe Solver do
   context 'Test Fizzbuzz algorithm' do
     it 'the method returns fizzbuzz if the number is divisble by 3 and 5' do
@@ -31,6 +30,7 @@ describe Solver do
   end
 end
 
+# Reverse Tests
 describe Solver do
   context 'Reverse Tests' do
     it 'The method reverse should reverse the string' do
@@ -40,3 +40,5 @@ describe Solver do
     end
   end
 end
+
+# Leo, please write your code here
